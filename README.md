@@ -11,4 +11,4 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
 
 ### Links
 
-- [Live site](https://your-live-site-url.com)
+- [Live site](https://hnt-audio.netlify.app/)
