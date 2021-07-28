@@ -211,7 +211,7 @@ cart.addEventListener("click", function () {
     });
 
     // -------Cart UI Dynamic update------------
-    i.innerHTML = `<img src="../styles/cart/${item.tag}.png" alt="pic" id="pic">`;
+    i.innerHTML = `<img src="./src/styles/cart/${item.tag}.png" alt="pic" id="pic">`;
     para.innerHTML = `<p id= "proName"  <b>${item.title}</b></p>
       <p id= "proPrice"  <b>$${item.price}</b></p>`;
     count.innerHTML = `${item.count}`;
