@@ -23,7 +23,7 @@ function show() {
   mainMenu.style.top = "0";
 }
 function close() {
-  mainMenu.style.top = "-110%";
+  mainMenu.style.top = "-120%";
 }
 // ---------------cart-------------
 const localStorage = window.localStorage;
@@ -71,7 +71,7 @@ product.forEach(item => {
       : [];
 
     const itemIndex = cartItems.findIndex(item => item.tag === tag);
-    console.log(itemIndex);
+//     console.log(itemIndex);
     if (itemIndex === -1) {
       cartItems.push({
         tag: tag,
@@ -94,7 +94,7 @@ cart.addEventListener("click", function () {
   let cartItems = localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [];
-  console.log(cartItems);
+//   console.log(cartItems);
 
   cartItems.forEach(item => {
     const element = document.getElementById(`in${item.tag}`);
@@ -137,7 +137,7 @@ cart.addEventListener("click", function () {
         : [];
 
       const itemIndex = cartItems.findIndex(item => item.tag == p.id);
-      console.log(itemIndex);
+//       console.log(itemIndex);
       if (itemIndex === -1) {
         cartItems.push({
           tag: tag,
@@ -173,8 +173,8 @@ cart.addEventListener("click", function () {
           ? JSON.parse(localStorage.getItem("cartItems"))
           : [];
         const itemIndex = cartItems.findIndex(item => item.tag == m.id);
-        console.log(itemIndex);
-        console.log(cartItems[itemIndex].tag);
+//         console.log(itemIndex);
+//         console.log(cartItems[itemIndex].tag);
         if (m.id == cartItems[itemIndex].tag) {
           cartItems[itemIndex].count -= 1;
           item.count -= 1;
@@ -183,11 +183,11 @@ cart.addEventListener("click", function () {
           }, 0);
           if (item.count < 1) {
             cartItems = cartItems.filter(x => {
-              console.log(item.tag);
-              console.log(x.tag);
+//               console.log(item.tag);
+//               console.log(x.tag);
               return item.tag != x.tag;
             });
-            console.log(cartItems);
+//             console.log(cartItems);
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
             name.parentNode.removeChild(name);
           }
